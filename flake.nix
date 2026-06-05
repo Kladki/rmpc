@@ -51,6 +51,9 @@
 
             # Build the specified package
             cargoExtraArgs = "-p ${pname}";
+
+            # Set the package's main binary, as not doing so is deprecated.
+            meta.mainProgram = pname;
           };
 
         # Helper function to add files to the build source based on their file extension.
